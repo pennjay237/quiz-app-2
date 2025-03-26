@@ -1,14 +1,19 @@
 /* ✅ General Styling */
 body {
   font-family: "Arial", sans-serif;
-   /* Navy Blue */
-  color: rgb(255, 255, 255);
+  background: url("https://images.unsplash.com/photo-1582417720300-68eec4f7073d") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
   text-align: center;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-/* ✅ Overlay for Better Visibility */
+/* ✅ Dark Overlay for Better Visibility */
 body::before {
   content: "";
   position: absolute;
@@ -16,25 +21,28 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
+  background: rgba(0, 0, 0, 0.6);
   z-index: -1;
 }
 
-/* ✅ Quiz Containers (Welcome, Quiz, Score) */
+/* ✅ Game Containers (Welcome, Quiz, Score) */
 .welcome-container, .quiz-container, .score-container {
-  background: rgba(0, 0, 0, 0.85); /* Semi-transparent black */
-  padding: 2rem;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 2.5rem;
   border-radius: 15px;
   width: 90%;
   max-width: 600px;
-  margin: auto;
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
   border: 2px solid white;
   animation: fadeIn 0.5s ease-in-out;
+  text-align: center;
+  position: relative;
 }
 
 /* ✅ Headings */
 h1, h2 {
   color: white;
+  margin-bottom: 15px;
 }
 
 /* ✅ Dropdown Styling */
@@ -64,12 +72,19 @@ button {
 }
 
 button:hover {
-  background: #99b0c9; /* Light blue hover */
+  background: #007bff;
   color: white;
   transform: scale(1.05);
 }
 
 /* ✅ Answer Buttons */
+.answers {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 .answers button {
   background: rgb(162, 125, 204);
   color: white;
@@ -79,7 +94,6 @@ button:hover {
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  margin: 10px;
   width: 45%;
 }
 
@@ -110,7 +124,7 @@ button:hover {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
-  width: 45%;
+  width: 48%;
 }
 
 .nav-buttons button:hover {
@@ -118,51 +132,28 @@ button:hover {
   color: white;
 }
 
-/* ✅ Score Messages */
-.score-message {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
+/* ✅ Timer Bar Styling */
+.timer-bar {
+  width: 100%;
+  height: 10px;
+  background: #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  position: relative;
 }
 
-/* ✅ Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-/* ✅ Responsive Design */
-@media (max-width: 600px) {
-  .quiz-container, .welcome-container, .score-container {
-    width: 95%;
-    padding: 1.5rem;
-  }
-
-  .answers button {
-    width: 100%;
-    margin: 5px 0;
-  }
-}
-
-
-/* ✅ General Styling */
-body {
-  font-family: "Arial", sans-serif;
-  background-image:;
-  color: white;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+.progress {
+  height: 100%;
+  width: 100%;
+  background: green;
+  transition: width 1s linear;
 }
 
 /* ✅ Score Page Styling */
 .score-container {
-  background: rgba(0, 0, 0, 0.85); /* Semi-transparent black */
-  padding: 2.5rem; /* Added padding */
+  background: rgba(0, 0, 0, 0.85);
+  padding: 2.5rem;
   border-radius: 15px;
   width: 90%;
   max-width: 600px;
@@ -174,18 +165,6 @@ body {
   margin: auto;
 }
 
-/* ✅ Headings */
-h1, h2 {
-  color: white;
-}
-
-/* ✅ Score Message */
-.score-message {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
 /* ✅ Input Field */
 input {
   width: 80%;
@@ -194,26 +173,6 @@ input {
   border-radius: 5px;
   border: none;
   text-align: center;
-}
-
-/* ✅ Buttons */
-button {
-  background: white;
-  color: black;
-  padding: 12px 20px;
-  font-size: 18px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-  width: 100%;
-  margin-top: 10px;
-}
-
-button:hover {
-  background: #99b0c9;
-  color: white;
-  transform: scale(1.05);
 }
 
 /* ✅ Leaderboard */
@@ -253,140 +212,24 @@ li[style*="color: red"] {
   to { opacity: 1; transform: scale(1); }
 }
 
-/* ✅ Responsive Design */
-@media (max-width: 600px) {
-  .score-container {
-    width: 95%;
-    padding: 2rem;
-  }
-}
-
-
-/* ✅ Apply Background Image to Entire App */
-body {
-  font-family: "Arial", sans-serif;
-  background: url("https://images.unsplash.com/photo-1582417720300-68eec4f7073d") no-repeat center center fixed;
-  background-size: cover;
-  color: white;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-/* ✅ Overlay for Better Visibility */
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Dark transparent overlay */
-  z-index: -1;
-}
-
-/* ✅ Game Containers (Welcome, Quiz, Score) */
-.welcome-container, .quiz-container, .score-container {
-  background: rgba(0, 0, 0, 0.85); /* Semi-transparent black */
-  padding: 2.5rem;
-  border-radius: 15px;
-  width: 90%;
-  max-width: 600px;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
-  border: 2px solid white;
-  animation: fadeIn 0.5s ease-in-out;
-  text-align: center;
-  position: relative;
-}
-
-/* ✅ Buttons */
-button {
-  background: white;
-  color: black;
-  padding: 12px 20px;
-  font-size: 18px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-  width: 100%;
-  margin-top: 10px;
-}
-
-button:hover {
-  background: #007bff;
-  color: white;
-  transform: scale(1.05);
-}
-
-/* ✅ Responsive Design */
-@media (max-width: 600px) {
+/* ✅ Fully Responsive Design */
+@media (max-width: 768px) {
   .quiz-container, .welcome-container, .score-container {
     width: 95%;
-    padding: 2rem;
+    padding: 1.5rem;
   }
-}
 
-/* ✅ Timer Bar Styling */
-.timer-bar {
-  width: 100%;
-  height: 10px;
-  background: #ccc;
-  border-radius: 5px;
-  margin-bottom: 15px;
-  overflow: hidden;
-  position: relative;
-}
+  .answers button {
+    width: 100%;
+    margin: 5px 0;
+  }
 
-.progress {
-  height: 100%;
-  width: 100%;
-  background: green;
-  transition: width 1s linear;
-}
+  .nav-buttons {
+    flex-direction: column;
+  }
 
-/* ✅ Game Containers */
-.quiz-container {
-  background: rgba(0, 0, 0, 0.85);
-  padding: 2rem;
-  border-radius: 15px;
-  width: 90%;
-  max-width: 600px;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
-  border: 2px solid white;
-  animation: fadeIn 0.5s ease-in-out;
-  text-align: center;
-  position: relative;
-}
-
-/* ✅ Buttons */
-button {
-  background: white;
-  color: black;
-  padding: 12px 20px;
-  font-size: 18px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-  width: 100%;
-  margin-top: 10px;
-}
-
-button:hover {
-  background: #007bff;
-  color: white;
-  transform: scale(1.05);
-}
-
-/* ✅ Responsive Design */
-@media (max-width: 600px) {
-  .quiz-container {
-    width: 95%;
-    padding: 2rem;
+  .nav-buttons button {
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
