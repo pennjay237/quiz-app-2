@@ -1,0 +1,262 @@
+/* ✅ General Styling */
+body {
+  font-family: "Arial", sans-serif;
+   /* Navy Blue */
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* ✅ Overlay for Better Visibility */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* ✅ Quiz Containers (Welcome, Quiz, Score) */
+.welcome-container, .quiz-container, .score-container {
+  background: rgba(0, 0, 0, 0.85); /* Semi-transparent black */
+  padding: 2rem;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+  border: 2px solid white;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* ✅ Headings */
+h1, h2 {
+  color: white;
+}
+
+/* ✅ Dropdown Styling */
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid white;
+  outline: none;
+  background: navy;
+  color: white;
+}
+
+/* ✅ Buttons */
+button {
+  background: white;
+  color: black;
+  padding: 12px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #99b0c9; /* Light blue hover */
+  color: white;
+  transform: scale(1.05);
+}
+
+/* ✅ Answer Buttons */
+.answers button {
+  background: rgb(162, 125, 204);
+  color: white;
+  padding: 12px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin: 10px;
+  width: 45%;
+}
+
+.answers button:hover {
+  background: #99b0c9;
+  transform: scale(1.1);
+}
+
+/* ✅ Disabled Answer Buttons */
+.answers button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+/* ✅ Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.nav-buttons button {
+  background: white;
+  color: black;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 45%;
+}
+
+.nav-buttons button:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* ✅ Score Messages */
+.score-message {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* ✅ Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 600px) {
+  .quiz-container, .welcome-container, .score-container {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .answers button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+
+/* ✅ General Styling */
+body {
+  font-family: "Arial", sans-serif;
+  background-image:;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ✅ Score Page Styling */
+.score-container {
+  background: rgba(0, 0, 0, 0.85); /* Semi-transparent black */
+  padding: 2.5rem; /* Added padding */
+  border-radius: 15px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(243, 228, 228, 0.3);
+  border: 2px solid white;
+  animation: fadeIn 0.5s ease-in-out;
+  text-align: center;
+  position: relative;
+  margin: auto;
+}
+
+/* ✅ Headings */
+h1, h2 {
+  color: white;
+}
+
+/* ✅ Score Message */
+.score-message {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* ✅ Input Field */
+input {
+  width: 80%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+}
+
+/* ✅ Buttons */
+button {
+  background: white;
+  color: black;
+  padding: 12px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #99b0c9;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* ✅ Leaderboard */
+.leaderboard {
+  list-style: none;
+  padding: 0;
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+.leaderboard li {
+  background: rgb(125, 107, 150);
+  color: white;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+/* ✅ Correct/Incorrect Answers */
+ul {
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+li[style*="color: red"] {
+  font-weight: bold;
+}
+
+/* ✅ Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 600px) {
+  .score-container {
+    width: 95%;
+    padding: 2rem;
+  }
+}

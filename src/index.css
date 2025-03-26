@@ -1,0 +1,95 @@
+.score-container {
+  text-align: center;
+  padding: 20px;
+  background: black;
+  color: white;
+  border-radius: 10px;
+  width: 400px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* 🔹 Leaderboard List */
+.leaderboard {
+  list-style: none;
+  padding: 0;
+  font-size: 18px;
+}
+
+.leaderboard li {
+  background: navy;
+  color: white;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+/* 🔹 Input Field */
+input {
+  width: 80%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* 🔹 Animated Buttons */
+button {
+  background: white;
+  color: black;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #007bff;
+  color: white;
+  transform: scale(1.1);
+}
+
+li {
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+li[style*="color: red"] {
+  font-weight: bold;
+}
+
+
+/* ✅ Centering and Styling the Welcome Page */
+.welcome-container {
+  background: black;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 400px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+  border: 2px solid white;
+  margin: auto;
+  margin-top: 100px;
+}
+
+/* 🔹 Dropdown Styling */
+.select-container {
+  margin-bottom: 20px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: navy;
+  color: white;
+}
+
+
