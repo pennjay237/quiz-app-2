@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../App";
+import "../App"; // Ensure CSS is properly imported
 
 const WelcomePage = () => {
   const [difficulty, setDifficulty] = useState("easy");
-  const [category, setCategory] = useState("9");
+  const [category, setCategory] = useState("9"); // Default: General Knowledge
   const navigate = useNavigate();
 
+  // Start Quiz with Selected Options
   const startQuiz = () => {
     navigate(`/quiz?difficulty=${difficulty}&category=${category}`);
   };
@@ -15,6 +16,7 @@ const WelcomePage = () => {
     <div className="welcome-container">
       <h1>Welcome to the Quiz Game 🎯</h1>
 
+      {/* Difficulty Selection */}
       <div className="select-container">
         <h2>Select Difficulty</h2>
         <select value={difficulty} onChange={(e) => setDifficulty(e.target.value)}>
@@ -24,6 +26,7 @@ const WelcomePage = () => {
         </select>
       </div>
 
+      {/* Category Selection */}
       <div className="select-container">
         <h2>Select Category</h2>
         <select value={category} onChange={(e) => setCategory(e.target.value)}>
@@ -35,6 +38,7 @@ const WelcomePage = () => {
         </select>
       </div>
 
+      {/* Start Game Button */}
       <button className="start-button" onClick={startQuiz}>Start Game 🚀</button>
     </div>
   );

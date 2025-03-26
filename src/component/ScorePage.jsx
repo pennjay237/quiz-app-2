@@ -29,13 +29,11 @@ const ScorePage = () => {
 
   return (
     <div className="score-container">
-      {/* ✅ Special Message if No Questions Were Answered */}
-      {score === 0 ? (
-        <h1 style={{ color: "red" }}>❌ You didn't answer any question! Try Again! ❌</h1>
+      {/* ✅ Custom Message Based on Score */}
+      {score >= 5 ? (
+        <h1 style={{ color: "green" }}>🎉 Congratulations! You Passed! 🎉</h1>
       ) : (
-        <h1 className="score-message" style={{ color: score >= 5 ? "green" : "red" }}>
-          {score >= 5 ? "🎉 Congratulations! You Passed! 🎉" : "❌ Sorry, you did not pass. Try Again! ❌"}
-        </h1>
+        <h1 style={{ color: "red" }}>❌ Sorry, you did not pass. Try Again! ❌</h1>
       )}
 
       <h2>Your Score: {score}/10</h2>
