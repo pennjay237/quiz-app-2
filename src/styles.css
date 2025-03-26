@@ -21,14 +21,13 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
   z-index: -1;
 }
 
 /* ✅ Game Containers (Welcome, Quiz, Score) */
 .welcome-container, .quiz-container, .score-container {
   background: rgba(0, 0, 0, 0.85);
-  padding: 2.5rem;
+  padding: 2rem;
   border-radius: 15px;
   width: 90%;
   max-width: 600px;
@@ -219,9 +218,13 @@ li[style*="color: red"] {
     padding: 1.5rem;
   }
 
+  .answers {
+    flex-direction: column;
+    gap: 8px;
+  }
+
   .answers button {
     width: 100%;
-    margin: 5px 0;
   }
 
   .nav-buttons {
@@ -231,5 +234,35 @@ li[style*="color: red"] {
   .nav-buttons button {
     width: 100%;
     margin-bottom: 10px;
+  }
+
+  h1, h2 {
+    font-size: 20px;
+  }
+}
+
+/* ✅ Additional Mobile Optimization (For Extra Small Screens) */
+@media (max-width: 480px) {
+  .quiz-container, .welcome-container, .score-container {
+    width: 98%;
+    padding: 1rem;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+
+  select {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .nav-buttons {
+    gap: 5px;
+  }
+
+  h1, h2 {
+    font-size: 18px;
   }
 }
