@@ -29,7 +29,7 @@ const ScorePage = () => {
 
   return (
     <div className="score-container">
-      {/* ✅ Custom Message Based on Score */}
+      {/* Custom Message Based on Score */}
       {score >= 5 ? (
         <h1 style={{ color: "green" }}>🎉 Congratulations! You Passed! 🎉</h1>
       ) : (
