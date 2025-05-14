@@ -87,7 +87,7 @@ const Quiz = () => {
 
   return (
     <div className="quiz-container">
-      {/* ✅ Timer Bar */}
+      {/* Timer Bar */}
       <div className="timer-bar">
         <div className="progress" style={{ width: `${progress}%`, background: timeLeft <= 5 ? "red" : "green" }}></div>
       </div>
