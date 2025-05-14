@@ -14,7 +14,7 @@ const WelcomePage = () => {
 
   return (
     <div className="welcome-container">
-      <h1>Welcome to the Quiz Game 🎯</h1>
+      <h1>Welcome to the Quiz Game</h1>
 
       {/* Difficulty Selection */}
       <div className="select-container">

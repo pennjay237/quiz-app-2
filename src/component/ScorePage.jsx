@@ -61,7 +61,7 @@ const ScorePage = () => {
       <h2>✅ Correct Answers</h2>
       <ul>
         {userAnswers.map((item, index) => (
-          <li key={index} style={{ color: item.userAnswer === "Not Answered ❌" ? "red" : "green" }}>
+          <li key={index} style={{ color: item.userAnswer === "Not Answered ❌" ? "" : "green" }}>
             {item.question} - {item.userAnswer === "Not Answered ❌" ? "❌ Not Answered" : `✅ ${item.correct}`}
           </li>
         ))}

@@ -26,7 +26,7 @@ body::before {
 
 /* ✅ Game Containers (Welcome, Quiz, Score) */
 .welcome-container, .quiz-container, .score-container {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(138, 134, 134, 0.85);
   padding: 2rem;
   border-radius: 15px;
   width: 90%;
@@ -52,8 +52,8 @@ select {
   border-radius: 5px;
   border: 1px solid white;
   outline: none;
-  background: navy;
-  color: white;
+  background: rgb(251, 251, 253);
+  color: rgb(0, 0, 0);
 }
 
 /* ✅ Buttons */
@@ -71,7 +71,7 @@ button {
 }
 
 button:hover {
-  background: #007bff;
+  background: #000000;
   color: white;
   transform: scale(1.05);
 }
@@ -85,8 +85,8 @@ button:hover {
 }
 
 .answers button {
-  background: rgb(162, 125, 204);
-  color: white;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   padding: 12px 20px;
   font-size: 18px;
   border: none;
@@ -97,8 +97,9 @@ button:hover {
 }
 
 .answers button:hover {
-  background: #99b0c9;
+  background: #000000;
   transform: scale(1.1);
+  color: white;
 }
 
 /* ✅ Disabled Answer Buttons */
@@ -127,7 +128,7 @@ button:hover {
 }
 
 .nav-buttons button:hover {
-  background: #007bff;
+  background: #000000;
   color: white;
 }
 
@@ -145,7 +146,7 @@ button:hover {
 .progress {
   height: 100%;
   width: 100%;
-  background: green;
+  background: rgb(0, 0, 0);
   transition: width 1s linear;
 }
 
@@ -183,7 +184,7 @@ input {
 }
 
 .leaderboard li {
-  background: rgb(125, 107, 150);
+  background: rgb(179, 179, 179);
   color: white;
   padding: 10px;
   margin: 5px 0;
